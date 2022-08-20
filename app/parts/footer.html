@@ -1,0 +1,82 @@
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="contacts">
+          <h3>Свяжитесь с нами любым 
+            удобным способом</h3>
+
+          <ul class="contact-list">
+            <li class="contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:+8 (83145) 2-46-11">8 (83145) 2-46-11</a>
+            </li>
+            <li class="contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:tehno-wood@mail.ru">tehno-wood@mail.ru</a>
+            </li>
+            <li class="contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <a href="">г. Кстово, Типографский проезд, 11а</a>
+            </li>
+          </ul>
+          
+          <form class="callback">
+            <div class="main-input">
+              <span>Обратный звонок</span>
+              <label data-error="Заполните это поле">
+                <i class="fa-solid fa-phone"></i>
+                <input placeholder="+7(___)___-__-__" type="tel" size="11" value="">
+              </label>
+            </div>
+            <button>Отправить</button>
+
+            <p class="agreement">Нажимая на кнопку, я даю согласие на обработку своих персональных данных.</p>
+          </form>
+        </div>
+
+        <div id="map"></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="main.js"></script>
+
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript">
+  </script>
+
+<script type="text/javascript">
+  ymaps.ready(init);
+  function init(){
+    var myMap = new ymaps.Map("map", {
+      center: [55.76, 37.64],
+      zoom: 10
+    });
+  }
+</script>
+
+
+  <script async type="module">
+    import { Fancybox } from "https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.esm.js";
+  </script>
+
+  <script src="https://kit.fontawesome.com/2926ef6aad.js" crossorigin="anonymous"></script>
+
+  <script type="module">
+    import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js'
+
+    const swiper = new Swiper(".mySwiper", {
+      loop: true,
+      autoplay: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+</body>
+</html>
