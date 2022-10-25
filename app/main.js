@@ -48,3 +48,15 @@ window.addEventListener("click", e => {
     body.style.overflow = "hidden"
   }
 })
+
+
+// preloader
+$(document).ready(() => {
+  setTimeout(() => {
+    $("body").removeClass("no-scroll")
+    $(".preloader").addClass("is-closed")
+    setTimeout(() => {
+      $(".preloader").remove()
+    }, 1000)
+  }, 2000);
+})
