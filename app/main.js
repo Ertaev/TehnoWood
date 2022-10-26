@@ -8,7 +8,6 @@ scrollBtn.addEventListener("click", e => {
 })
 
 
-
 // animation counters
 const counters = document.querySelectorAll(".statistic-list__item div span");
 const speed = 500;
@@ -46,6 +45,14 @@ window.addEventListener("click", e => {
   if (e.target && e.target.classList.contains("burger")) {
     mobileMenu.classList.add("active")
     body.style.overflow = "hidden"
+  }
+
+  // modal-window
+  if (e.target && e.target.classList.contains("popup__close") || e.target.classList.contains("popup-wrapper")) {
+    $('.popup-wrapper').removeClass("popup-wrapper__expanded")
+  }
+  if (e.target && $(e.target).text() === "обратный звонок") {
+    $('.popup-wrapper').addClass("popup-wrapper__expanded")
   }
 })
 
