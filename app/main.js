@@ -50,9 +50,11 @@ window.addEventListener("click", e => {
   // modal-window
   if (e.target && e.target.classList.contains("popup__close") || e.target.classList.contains("popup-wrapper")) {
     $('.popup-wrapper').removeClass("popup-wrapper__expanded")
+    body.style.overflow = ""
   }
   if (e.target && $(e.target).text() === "обратный звонок") {
     $('.popup-wrapper').addClass("popup-wrapper__expanded")
+    body.style.overflow = "hidden"
   }
 })
 
